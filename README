@@ -1,0 +1,42 @@
+# Operating-System-Project-6
+Project 6
+
+Memory Management Simulation Project
+
+Author
+
+Christine McKelvey
+
+Date
+
+December 14, 2023
+
+Overview
+
+This project simulates a basic memory management system in an operating system. It consists of two main components: the Operating System Supervisor (parent.c) and the child processes (child.c). The simulation handles memory requests, page faults, and inter-process communication using shared memory and message queues.
+
+Features
+
+Simulated Clock: Uses shared memory to simulate a system clock.
+Inter-Process Communication: Utilizes message queues for communication between parent and child processes.
+Memory Management: Includes a frame table for memory allocation and a process control block for each child process.
+Logging and Statistics: Records events and calculates statistics like memory accesses and page faults.
+
+Command Line Arguments
+
+-f: Specify the logfile name.
+-n: Total number of child processes oss will ever launch.
+-s: Maximum number of concurrent running processes.
+-t: Time to launch new child processes.
+-h: Display help information.
+
+Functionality
+
+Parent Process (oss): Manages the shared memory, frame table, and handles requests from child processes.
+Child Process: Generates memory access requests and communicates with the parent process.
+
+Message Queues: Used for sending memory requests and receiving responses.
+Shared Memory: Stores the simulated clock and is accessed by both parent and child processes.
+Handling Page Faults
+
+The system logs all important events to a specified logfile and prints memory and process statistics.
